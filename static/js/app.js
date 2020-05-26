@@ -80,7 +80,7 @@ d3.json("samples.json").then(sample => {
               type: "indicator",
               mode: "gauge+number",
               value: washFreq,
-              title: { text: "Scrubs Per Week"},
+              title: { text: "Belly Button Washing Frequency<br>Scrubs Per Week"},
               gauge: {
                 axis: {
                     range: [null, 9],
@@ -132,20 +132,5 @@ d3.json("samples.json").then(sample => {
         fillMetadata(currentId);
         plotGaugeChart(currentId);
     }
-
-/*     dropdownMenu.on("change", getData);
-
-    function getData() {
-        currentId = dropdownMenu.property("value");
-        newSample = samplesData.find(sampleInstance => sampleInstance.id === currentId);
-        updateCharts(newSample);
-    }
-
-    function updateCharts(newSample) {
-        Plotly.restyle("bar", newSample);
-        Plotly.restyle("scatter", newSample);
-        fillMetadata(currentId);
-        Plotly.restyle("gauge", newSample);
-    } */
 
 });
