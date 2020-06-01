@@ -26,13 +26,18 @@ d3.json("samples.json").then(sample => {
             text: currentSample.otu_labels
         }];
 
-        layout = {
+        barLayout = {
+            title: {text: "Top 10 OTUs"},
+            xaxis: {
+                title: {text: "Bacteria Count"}
+            },
             yaxis: {
+                title: {text: "OTU ID"},
                 autorange: "reversed"
             }
         };
 
-        Plotly.newPlot("bar", barData, layout);
+        Plotly.newPlot("bar", barData, barLayout);
 
     }
 
@@ -54,6 +59,9 @@ d3.json("samples.json").then(sample => {
         scatterLayout = {
             xaxis: {
                 title: "OTU ID"
+            },
+            yaxis: {
+                title: "Bacteria Count"
             }
         };
 
